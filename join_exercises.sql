@@ -13,7 +13,8 @@ where emp_no = "111939";
 select departments.dept_name, employees.first_name
 from employees
        join dept_manager on dept_manager.emp_no = employees.emp_no
-       join departments on departments.dept_no = dept_manager.dept_no;
+       join departments on departments.dept_no = dept_manager.dept_no
+where to_date > '2019-1-31';
 select departments.dept_name, employees.first_name
 from employees
        join dept_manager on dept_manager.emp_no = employees.emp_no
