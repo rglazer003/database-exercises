@@ -9,3 +9,13 @@ join ads_categories on ads.id = ads_categories.id
 join categories on ads_categories.category1 = categories.id
 where ads.id = '2';
 
+select ads.title
+from ads
+join ads_categories on ads.id = ads_categories.id
+where ads_categories.category1 = '1';
+
+select ads.title
+from ads
+join users on ads.user = users.id
+where users.id = '3';
+
