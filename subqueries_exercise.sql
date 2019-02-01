@@ -61,3 +61,17 @@ insert into ads_categories (id, category1, category2)
 values ('1', '1', null),
        ('2', '2', '3'),
        ('3', '1', null);
+drop table if exists employees.ads_categories;
+create table ads_categories (
+  id int not null auto_increment primary key,
+  ad_id int not null,
+  cat_id int not null,
+  foreign key (ad_id) references ads(id),
+  foreign key (cat_id) references categories(id)
+);
+
+insert into ads_categories (ad_id, cat_id)
+values ('1', '2'),
+       ('2', '2'),
+       ('2', '3'),
+       ('3', '1');
